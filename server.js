@@ -10,7 +10,7 @@ const port = 3000
 
 app.get('/', (req, res) =>{
 var con = mysql.createConnection({
- host: mysql-apk.9.212.159.114.nip.io,
+ host: mysql,
  user: "root",
  password: "password",
  database:"test"
