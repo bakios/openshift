@@ -9,7 +9,9 @@ var apm = require('elastic-apm-node').start({
 
 })
 
+var err = new Error('Ups, something broke!')
 
+apm.captureError(err)
 
 var mysql = require('mysql');
 
