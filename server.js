@@ -1,17 +1,23 @@
-var apm = require('elastic-apm-node').start({
+//var apm = require('elastic-apm-node').start({
   // Override service name from package.json
   // Allowed characters: a-z, A-Z, 0-9, -, _, and space
-	serviceName: 'server'
+  //	serviceName: 'server'
   // Use if APM Server requires a token
   //     secretToken: '',
   // Set custom APM Server URL (default: http://localhost:8200)
   //    serverUrl: ''
 
-})
+//})
 
 //var err = new Error('Ups, something broke!')
 
 //apm.captureError(err)
+
+const apm = require('elastic-apm-node').start({
+ // serviceName: '',
+ // secretToken: '',
+  serverUrl: 'http://9.212.159.114:8200',
+})
 
 var mysql = require('mysql');
 
